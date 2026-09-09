@@ -299,14 +299,10 @@
           <div class="filter__container">
             <select id="brand__filter" class="brand__filter">
               <option value="loreal">L'Oréal</option>
-              <option value="maybelline" selected>
-                Maybelline
-              </option>
-              <option value="covergirl">
-                Covergirl
-              </option>
+              <option value="maybelline" selected>Maybelline</option>
+              <option value="covergirl">Covergirl</option>
               <option value="nyx">NYX</option>
-              <option value="clinique" >Clinique</option>
+              <option value="clinique">Clinique</option>
             </select>
           </div>
 
@@ -314,6 +310,83 @@
             <div class="splide__track">
               <ul class="splide__list" id="shop__slider__list"></ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHECKOUT SECTION -->
+      <section id="order" class="section__wrapper alt-bg">
+        <div class="container">
+          <div class="checkout__section">
+            <div class="section__title">
+              <h2 data-i18n="orderTitle">Place Your Order</h2>
+              <p data-i18n="orderDesc">
+                Complete your purchase with instant order confirmation
+              </p>
+            </div>
+
+            <form id="checkout__form" class="checkout__form" novalidate>
+              <div class="form__row">
+                <div class="form__field">
+                  <label for="full__name" data-i18n="labelName"
+                    >Full Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="full__name"
+                    placeholder="e.g. Lika Tabutsadze"
+                  />
+                  <span class="error__msg" id="name__error"></span>
+                </div>
+
+                <div class="form__field">
+                  <label for="email" data-i18n="labelEmail"
+                    >Email Address *</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Tabutsadze@example.com"
+                  />
+                  <span class="error__msg" id="email__error"></span>
+                </div>
+              </div>
+
+              <div class="form__row">
+                <div class="form__field">
+                  <label for="phone" data-i18n="labelPhone"
+                    >Phone Number *</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+995 555 12 34 56"
+                  />
+                  <span class="error__msg" id="phone__error"></span>
+                </div>
+
+                <div class="form__field">
+                  <label for="shipping__address" data-i18n="labelAddress"
+                    >Delivery Address *</label
+                  >
+                  <input
+                    type="text"
+                    id="shipping__address"
+                    placeholder="Tbilisi, 82 Ilia Chavchavadze Avenue"
+                  />
+                  <span class="error__msg" id="address__error"></span>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                id="submit__order__btn"
+                class="btn"
+                data-i18n="btnSubmit"
+              >
+                Complete Purchase
+              </button>
+            </form>
           </div>
         </div>
       </section>

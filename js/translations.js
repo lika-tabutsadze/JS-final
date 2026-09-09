@@ -22,7 +22,24 @@ export const translations = {
             noProductsFound: "No products found for this brand.",
             cartTitle: "Your Shopping Cart",
             cartSubtotal: "Subtotal:",
-            cartCheckout: "Proceed to Order"
+            cartCheckout: "Proceed to Order",
+            orderTitle: "Place Your Order",
+            orderDesc: "Complete your purchase with instant order confirmation",
+            labelName: "Full Name *",
+            labelEmail: "Email Address *",
+            labelPhone: "Phone Number *",
+            labelAddress: "Delivery Address *",
+            btnSubmit: "Complete Purchase",
+            valNameEmpty: "Full name is required",
+            valNameShort: "Name must be at least 3 characters",
+            valEmailEmpty: "Email address is required",
+            valEmailInvalid: "Please enter a valid email address",
+            valPhoneEmpty: "Phone number is required",
+            valPhoneInvalid: "Enter valid phone number (e.g. +995555123456 or 555123456)",
+            valAddressEmpty: "Delivery address is required",
+            valAddressShort: "Address must be at least 5 characters",
+            cartEmptyError: "Your cart is empty! Please add products before placing an order.",
+            orderSuccess: "Thank you! Your order has been placed successfully."
         },
         ka: {
             navSale: "ფასდაკლება",
@@ -47,7 +64,24 @@ export const translations = {
             noProductsFound: "პროდუქტები ვერ მოიძებნა.",
             cartTitle: "თქვენი კალათა",
             cartSubtotal: "ჯამი:",
-            cartCheckout: "შეკვეთაზე გადასვლა"
+            cartCheckout: "შეკვეთაზე გადასვლა",
+            orderTitle: "შეკვეთის გაფორმება",
+            orderDesc: "შეავსეთ ფორმა შეკვეთის დასასრულებლად",
+            labelName: "სრული სახელი *",
+            labelEmail: "ელ-ფოსტა *",
+            labelPhone: "ტელეფონის ნომერი *",
+            labelAddress: "მისამართი *",
+            btnSubmit: "შეკვეთის დასრულება",
+            valNameEmpty: "სახელისა და გვარის მითითება სავალდებულოა",
+            valNameShort: "სახელი უნდა შეიცავდეს მინიმუმ 3 სიმბოლოს",
+            valEmailEmpty: "ელ-ფოსტის მითითება სავალდებულოა",
+            valEmailInvalid: "გთხოვთ მიუთითოთ ვალიდური ელ-ფოსტა",
+            valPhoneEmpty: "ტელეფონის ნომრის მითითება სავალდებულოა",
+            valPhoneInvalid: "მიუთითეთ სწორი ნომერი (მაგ: +995555123456 ან 555123456)",
+            valAddressEmpty: "მისამართის მითითება სავალდებულოა",
+            valAddressShort: "მისამართი უნდა შეიცავდეს მინიმუმ 5 სიმბოლოს",
+            cartEmptyError: "თქვენი კალათა ცარიელია! შეკვეთის განსათავსებლად დაამატეთ პროდუქტები.",
+            orderSuccess: "გმადლობთ! თქვენი შეკვეთა წარმატებით დარეგისტრირდა."
             
         }
     };

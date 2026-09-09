@@ -241,7 +241,7 @@ if (cartOverlay) cartOverlay.addEventListener("click", toggleCart);
 
 function bindAddToCartButtons() {
   document.querySelectorAll(".add__to__cart").forEach((button) => {
-    button.onclick = null; 
+    button.onclick = null;
     button.onclick = () => {
       const name = button.dataset.name;
       const price = parseFloat(button.dataset.price);
@@ -282,7 +282,6 @@ function updateCartUI() {
   if (cartCount) cartCount.textContent = count;
   if (cartSubtotal) cartSubtotal.textContent = `$${total.toFixed(2)}`;
 
-  
   if (submitOrderBtn) {
     if (cart.length === 0) {
       submitOrderBtn.disabled = true;
@@ -306,3 +305,145 @@ function updateCartUI() {
 
 bindAddToCartButtons();
 updateCartUI();
+
+// ======CHECKOUT FORM VALIDATION=========
+const orderForm = document.getElementById("checkout__form");
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phoneRegex = /^(\+?995)?(5\d{8}|\d{9,12})$/;
+
+function validateInput(input, errorEl, rules) {
+  const val = input.value.trim();
+  let errorMessage = "";
+
+  if (!val) {
+    errorMessage = rules.emptyMsg;
+  } else if (rules.minLength && val.length < rules.minLength) {
+    errorMessage = rules.lengthMsg;
+  } else if (rules.regex && !rules.regex.test(val.replace(/\s+/g, ""))) {
+    errorMessage = rules.regexMsg;
+  }
+
+  if (errorMessage) {
+    input.classList.add("error__input");
+    input.classList.remove("valid__input");
+    errorEl.textContent = errorMessage;
+    return false;
+  } else {
+    input.classList.remove("error__input");
+    input.classList.add("valid__input");
+    errorEl.textContent = "";
+    return true;
+  }
+}
+
+if (orderForm) {
+  document.getElementById("full__name").addEventListener("blur", () => {
+    validateInput(
+      document.getElementById("full__name"),
+      document.getElementById("name__error"),
+      {
+        emptyMsg: translations[currentLang].valNameEmpty,
+        minLength: 3,
+        lengthMsg: translations[currentLang].valNameShort,
+      },
+    );
+  });
+
+  document.getElementById("email").addEventListener("blur", () => {
+    validateInput(
+      document.getElementById("email"),
+      document.getElementById("email__error"),
+      {
+        emptyMsg: translations[currentLang].valEmailEmpty,
+        regex: emailRegex,
+        regexMsg: translations[currentLang].valEmailInvalid,
+      },
+    );
+  });
+
+  document.getElementById("phone").addEventListener("blur", () => {
+    validateInput(
+      document.getElementById("phone"),
+      document.getElementById("phone__error"),
+      {
+        emptyMsg: translations[currentLang].valPhoneEmpty,
+        regex: phoneRegex,
+        regexMsg: translations[currentLang].valPhoneInvalid,
+      },
+    );
+  });
+
+  document.getElementById("shipping__address").addEventListener("blur", () => {
+    validateInput(
+      document.getElementById("shipping__address"),
+      document.getElementById("address__error"),
+      {
+        emptyMsg: translations[currentLang].valAddressEmpty,
+        minLength: 5,
+        lengthMsg: translations[currentLang].valAddressShort,
+      },
+    );
+  });
+
+  orderForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (cart.length === 0) {
+      alert(translations[currentLang].cartEmptyError);
+      return;
+    }
+
+    const isNameValid = validateInput(
+      document.getElementById("full__name"),
+      document.getElementById("name__error"),
+      {
+        emptyMsg: translations[currentLang].valNameEmpty,
+        minLength: 3,
+        lengthMsg: translations[currentLang].valNameShort,
+      },
+    );
+
+    const isEmailValid = validateInput(
+      document.getElementById("email"),
+      document.getElementById("email__error"),
+      {
+        emptyMsg: translations[currentLang].valEmailEmpty,
+        regex: emailRegex,
+        regexMsg: translations[currentLang].valEmailInvalid,
+      },
+    );
+
+    const isPhoneValid = validateInput(
+      document.getElementById("phone"),
+      document.getElementById("phone__error"),
+      {
+        emptyMsg: translations[currentLang].valPhoneEmpty,
+        regex: phoneRegex,
+        regexMsg: translations[currentLang].valPhoneInvalid,
+      },
+    );
+
+    const isAddressValid = validateInput(
+      document.getElementById("shipping__address"),
+      document.getElementById("address__error"),
+      {
+        emptyMsg: translations[currentLang].valAddressEmpty,
+        minLength: 5,
+        lengthMsg: translations[currentLang].valAddressShort,
+      },
+    );
+
+    if (isNameValid && isEmailValid && isPhoneValid && isAddressValid) {
+      alert(translations[currentLang].orderSuccess);
+      orderForm.reset();
+
+      document.querySelectorAll(".checkout__form input").forEach((input) => {
+        input.classList.remove("valid__input", "error__input");
+      });
+
+      cart = [];
+      updateCartUI();
+    }
+  });
+}

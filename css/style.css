@@ -511,6 +511,73 @@ body {
   object-position: center;
 }
 
+/* ==========STYLING THE CHECKOUT FORM============= */
+.checkout__section {
+  background: var(--bg-surface);
+  border-radius: 4px;
+  padding: 50px 40px;
+  border: 1px solid var(--border-neutral);
+  box-shadow: var(--shadow-subtle);
+}
+.checkout__form {
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form__row {
+  display: flex;
+  gap: 20px;
+}
+.form__field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.form__field label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+.form__field input {
+  padding: 14px 16px;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  border: 1px solid var(--border-neutral);
+  border-radius: 2px;
+  font-size: 13px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.form__field input:focus {
+  border-color: var(--accent-soft);
+  background: var(--bg-surface);
+}
+.form__field input.valid__input {
+  border-color: var(--success-color);
+}
+.form__field input.error__input {
+  border-color: var(--error-color);
+  background-color: #fff5f5;
+}
+.error__msg {
+  color: var(--error-color);
+  font-size: 11px;
+  margin-top: 6px;
+  min-height: 16px;
+  font-weight: 500;
+}
+
+.checkout__form .btn {
+  margin-top: 10px;
+  width: 100%;
+}
 /* ==========STYLING THE CART SIDEBAR============= */
 .cart__sidebar {
   position: fixed;
