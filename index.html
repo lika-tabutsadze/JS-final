@@ -417,7 +417,7 @@
 
     <!-- FOOTER -->
 
-     <footer>
+    <footer>
       <div class="footer__content">
         <a href="#">MUSE<span>.</span></a>
         <p>&copy; 2026 MUSE Beauty Cosmetics. All rights reserved.</p>
@@ -427,10 +427,27 @@
     <!-- SCROLL TO TOP BUTTON -->
 
     <button id="scroll__btn" class="scroll__btn">
-        <i class="fa-solid fa-up-long"></i>
+      <i class="fa-solid fa-up-long"></i>
     </button>
 
+    <!--===================COOKIE BANNER ============ -->
 
+    <div class="cookie__banner" id="cookie__banner">
+      <p data-i18n="cookieText">
+        We use cookies to improve your browsing experience and personalize
+        content.
+      </p>
+      <button class="btn btn__sm" id="accept__cookies" data-i18n="cookieAccept">
+        Accept
+      </button>
+      <button
+        class="btn btn__sm"
+        id="decline__cookies"
+        data-i18n="cookieDecline"
+      >
+        Decline
+      </button>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script type="module" src="./js/script.js"></script>

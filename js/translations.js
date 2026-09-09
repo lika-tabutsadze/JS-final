@@ -39,7 +39,10 @@ export const translations = {
             valAddressEmpty: "Delivery address is required",
             valAddressShort: "Address must be at least 5 characters",
             cartEmptyError: "Your cart is empty! Please add products before placing an order.",
-            orderSuccess: "Thank you! Your order has been placed successfully."
+            orderSuccess: "Thank you! Your order has been placed successfully.",
+            cookieText: "We use cookies to improve your browsing experience and personalize content.",
+            cookieAccept: "Accept",
+            cookieDecline: "Decline"
         },
         ka: {
             navSale: "ფასდაკლება",
@@ -81,7 +84,10 @@ export const translations = {
             valAddressEmpty: "მისამართის მითითება სავალდებულოა",
             valAddressShort: "მისამართი უნდა შეიცავდეს მინიმუმ 5 სიმბოლოს",
             cartEmptyError: "თქვენი კალათა ცარიელია! შეკვეთის განსათავსებლად დაამატეთ პროდუქტები.",
-            orderSuccess: "გმადლობთ! თქვენი შეკვეთა წარმატებით დარეგისტრირდა."
+            orderSuccess: "გმადლობთ! თქვენი შეკვეთა წარმატებით დარეგისტრირდა.",
+            cookieText: "ჩვენ ვიყენებთ Cookie-ს ფაილებს უკეთესი მომსახურების უზრუნველსაყოფად.",
+            cookieAccept: "თანხმობა",
+            cookieDecline: "უარყოფა"
             
         }
     };

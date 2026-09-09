@@ -415,6 +415,11 @@ body {
   object-fit: cover;
   border-radius: 2px;
   margin-bottom: 16px;
+  transition: var(--transition);
+}
+
+.slider-card img:hover {
+    transform: scale(1.1);
 }
 .slider-card h3 {
   font-size: 16px;
@@ -459,13 +464,9 @@ body {
     font-size: 18px;
 }
 
-.product__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 24px;
-}
 
-.product__card {
+
+.slider__card {
   background: var(--bg-surface);
   border-radius: 4px;
   padding: 20px;
@@ -473,20 +474,20 @@ body {
   border: 1px solid var(--border-neutral);
   transition: var(--transition);
 }
-.product__card:hover {
+.slider__card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-card);
   border-color: var(--border-subtle);
 }
 
-.product__card img {
+.slider__card img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   margin-bottom: 16px;
   border-radius: 2px;
 }
-.product__card h4 {
+.slider__card h4 {
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 8px;
@@ -718,6 +719,43 @@ footer {
 }
 
 
+/* =====STYLING THE COOKIE BANNER====== */
+.cookie__banner {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  max-width: 380px;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  padding: 20px;
+  border-radius: 2px;
+  border: 1px solid var(--border-neutral);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2000;
+  box-shadow: var(--shadow-card);
+  font-size: 12px;
+}
+.cookie__banner p {
+    font-size: 14px;
+}
+#accept__cookies {
+    background-color: transparent;
+    color: var(--success-color);
+    border-color: var(--border-subtle);
+    font-size: 10px;
+}
+#decline__cookies {
+    background-color: transparent;
+    color:  var(--error-color);
+    border-color:var(--border-subtle);
+    font-size: 10px;
+}
+
+#sale, #featured, #shop, #order {
+  scroll-margin-top: 80px;
+}
 
 /* ==========================================
    RESPONSIVE MEDIA 
@@ -838,6 +876,12 @@ footer {
   }
   .footer__content p {
     font-size: 11px;
+  }
+  .cookie__banner {
+    left: 20px;
+    right: 20px;
+    max-width: none;
+    bottom: 20px;
   }
 }
 
@@ -1011,6 +1055,16 @@ footer {
   .footer__content p {
     font-size: 11px;
   }
+  .cookie__banner {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    max-width: none;
+    padding: 16px;
+  }
+  .cookie__banner p {
+    font-size: 13px;
+  }
 }
 
 /* --- ==================320PX RESPONSIVE================ --- */
@@ -1119,5 +1173,15 @@ footer {
   .footer__content p {
     font-size: 10px;
     margin-top: 6px;
+  }
+  .cookie__banner {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 12px;
+    gap: 8px;
+  }
+  .cookie__banner p {
+    font-size: 11px;
   }
 }
