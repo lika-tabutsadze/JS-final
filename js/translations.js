@@ -15,7 +15,14 @@ export const translations = {
             timeSecs: "Secs",
             addToCart: "Add to Cart",
              featuredTitle: "Best Sellers",
-            featuredDesc: "Hand-picked favorites loved by beauty enthusiasts"
+            featuredDesc: "Hand-picked favorites loved by beauty enthusiasts",
+            shopTitle: "Our Collection",
+            shopDesc: "Thoughtfully formulated for every shade & complexion",
+            loadingProducts: "Loading products...",
+            noProductsFound: "No products found for this brand.",
+            cartTitle: "Your Shopping Cart",
+            cartSubtotal: "Subtotal:",
+            cartCheckout: "Proceed to Order"
         },
         ka: {
             navSale: "ფასდაკლება",
@@ -33,7 +40,14 @@ export const translations = {
             timeSecs: "წამი",
             addToCart: "კალათაში დამატება",
             featuredTitle: "ბესტსელერები",
-            featuredDesc: "პროდუქტები, რომლებიც განსაკუთრებით უყვართ ჩვენს მომხმარებლებს"
+            featuredDesc: "პროდუქტები, რომლებიც განსაკუთრებით უყვართ ჩვენს მომხმარებლებს",
+            shopTitle: "ჩვენი კოლექცია",
+            shopDesc: "სპეციალურად შექმნილი ნებისმიერი კანის ტონალობისთვის",
+            loadingProducts: "პროდუქტები იტვირთება...",
+            noProductsFound: "პროდუქტები ვერ მოიძებნა.",
+            cartTitle: "თქვენი კალათა",
+            cartSubtotal: "ჯამი:",
+            cartCheckout: "შეკვეთაზე გადასვლა"
             
         }
     };
