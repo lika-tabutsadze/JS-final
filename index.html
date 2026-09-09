@@ -7,7 +7,10 @@
     <!-- SEO and Social Meta tags -->
 
     <meta name="description" content="Beauty and cosmetics shopping website" />
-    <meta name="keywords" content="beauty, make-up, E-shop, elegance, luxury, cosmetics" />
+    <meta
+      name="keywords"
+      content="beauty, make-up, E-shop, elegance, luxury, cosmetics"
+    />
     <meta name="author" content="Lika Tabutsadze" />
     <meta property="og:type" content="Cosmetics website" />
     <meta property="og:title" content="MUSE - Beauty & Cosmetics" />
@@ -21,10 +24,13 @@
     />
 
     <!-- icon -->
-     <link rel="icon" href="./images/icon.png">
+    <link rel="icon" href="./images/icon.png" />
 
     <!-- fontawesome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
 
     <!-- Splide Slider -->
     <link
@@ -32,7 +38,15 @@
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
     />
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts CSS-->
     <link rel="stylesheet" href="./css/font.css" />
 
     <!-- CSS -->
@@ -42,8 +56,54 @@
     <title>MUSE | Beauty & Cosmetics</title>
   </head>
   <body>
+    <!-- HEADER -->
+    <header class="main__header" id="main__header">
+      <a href="#" class="logo">MUSE<span>.</span></a>
 
+      <nav>
+        <ul class="nav__links" id="nav__links">
+          <li><a href="#sale" data-i18n="navSale">Flash Sale</a></li>
+          <li><a href="#featured" data-i18n="navFeatured">Featured</a></li>
+          <li><a href="#shop" data-i18n="navShop">Shop All</a></li>
+          <li><a href="#order" data-i18n="navOrder">Place Order</a></li>
+        </ul>
+      </nav>
 
+      <div class="header__actions">
+        <button class="lang__btn" id="lang__toggle">KA</button>
+
+        <button
+          class="cart__btn"
+          id="cart__toggle"
+          aria-label="Open Shopping Cart"
+        >
+          <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+          <span class="cart__badge" id="cart__count">0</span>
+        </button>
+        <div class="burger__menu" id="burger__menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+    <section class="hero__section">
+      <div class="hero__content">
+        <span class="hero__subtitle" data-i18n="heroSubtitle"
+          >Essence of Pure Radiance</span
+        >
+        <h1 data-i18n="heroTitle">Unveil Your Natural Glow</h1>
+        <p data-i18n="heroText">
+          Clean, dermatologically tested formulas engineered to elevate your
+          daily routine with weightless finish and vivid pigment.
+        </p>
+        <a href="#shop" class="btn" data-i18n="heroBtn">Explore Collection</a>
+      </div>
+    </section>
+    </main>
 
     <script type="module" src="./js/script.js"></script>
   </body>
