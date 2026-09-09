@@ -699,6 +699,9 @@ body {
     width: 350px;
     right: -350px;
   }
+  .checkout__section {
+    padding: 40px 30px;
+  }
 }
 
 /* --- =============768PX RESPONSIVE========= --- */
@@ -768,13 +771,20 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
+  .checkout__section {
+    padding: 35px 20px;
+  }
+  .form__row {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 /* ==========480PX RESPONSIVE=============== */
 @media (max-width: 480px) {
   .main__header,
   .main__header.scrolled {
-    padding: 16px 4%;
+    padding: 16px 8%;
   }
 
   .logo {
@@ -783,7 +793,9 @@ body {
 
   .header__actions {
     gap: 12px;
+
   }
+
 
   .lang__btn {
     padding: 3px 8px;
@@ -791,7 +803,11 @@ body {
   }
 
   .cart__btn {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  .burger__menu span {
+    width: 24px;
+
   }
 
   .hero__section {
@@ -915,6 +931,16 @@ body {
     width: 100%;
     max-width: 280px;
   }
+  .checkout__section {
+    padding: 24px 16px;
+  }
+  .checkout__form {
+    gap: 16px;
+  }
+  .form__field input {
+    padding: 12px 14px;
+    font-size: 12px;
+  }
 }
 
 /* --- ==================320PX RESPONSIVE================ --- */
@@ -995,5 +1021,23 @@ body {
   .cart__total {
     font-size: 14px;
     margin-bottom: 12px;
+  }
+  .checkout__section {
+    padding: 18px 10px;
+  }
+  .checkout__form {
+    gap: 12px;
+  }
+  .form__field label {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+  .form__field input {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+  .error__msg {
+    font-size: 10px;
+    margin-top: 4px;
   }
 }
