@@ -77,11 +77,20 @@ function saleTimer(durationHours) {
     const seconds = remaining % 60;
 
     if (document.getElementById("hours"))
-      document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("hours").textContent = String(hours).padStart(
+        2,
+        "0",
+      );
     if (document.getElementById("minutes"))
-      document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("minutes").textContent = String(minutes).padStart(
+        2,
+        "0",
+      );
     if (document.getElementById("seconds"))
-      document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+      document.getElementById("seconds").textContent = String(seconds).padStart(
+        2,
+        "0",
+      );
 
     if (remaining <= 0) {
       localStorage.removeItem("museSaleEndTime");
@@ -93,3 +102,18 @@ function saleTimer(durationHours) {
 }
 saleTimer(2);
 
+if (document.querySelector("#featured__slider")) {
+  new Splide("#featured__slider", {
+    type: "loop",
+    perPage: 3,
+    gap: "24px",
+    autoplay: true,
+    interval: 3500,
+    breakpoints: {
+      1024: { perPage: 3, gap: "16px" },
+      768: { perPage: 2, gap: "16px" },
+      480: { perPage: 1, gap: "12px" },
+      320: { perPage: 1, gap: "8px" },
+    },
+  }).mount();
+}

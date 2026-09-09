@@ -13,7 +13,9 @@ export const translations = {
             timeHours: "Hours",
             timeMins: "Mins",
             timeSecs: "Secs",
-            addToCart: "Add to Cart"
+            addToCart: "Add to Cart",
+             featuredTitle: "Best Sellers",
+            featuredDesc: "Hand-picked favorites loved by beauty enthusiasts"
         },
         ka: {
             navSale: "ფასდაკლება",
@@ -29,7 +31,9 @@ export const translations = {
             timeHours: "საათი",
             timeMins: "წუთი",
             timeSecs: "წამი",
-            addToCart: "კალათაში დამატება"
+            addToCart: "კალათაში დამატება",
+            featuredTitle: "ბესტსელერები",
+            featuredDesc: "პროდუქტები, რომლებიც განსაკუთრებით უყვართ ჩვენს მომხმარებლებს"
             
         }
     };
