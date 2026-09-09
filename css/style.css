@@ -695,6 +695,30 @@ footer {
     color: var(--accent-soft);
     margin-left: 2px;
 }
+
+
+/*  =============STYLING THE SCROLL TO TOP BUTTON ============*/
+
+.scroll__btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--accent-soft);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1500;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    display: none;
+}
+
+
+
 /* ==========================================
    RESPONSIVE MEDIA 
    ========================================== */
