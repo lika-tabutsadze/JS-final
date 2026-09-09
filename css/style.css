@@ -671,6 +671,30 @@ body {
 .cart__overlay.open {
   display: block;
 }
+
+/* =========STYLING THE FOOTER========== */
+footer {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-neutral);
+  padding: 40px 6%;
+  text-align: center;
+  
+}
+.footer__content p {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-top: 8px;
+}
+.footer__content a {
+    color: var(--text-primary);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.footer__content a span {
+    color: var(--accent-soft);
+    margin-left: 2px;
+}
 /* ==========================================
    RESPONSIVE MEDIA 
    ========================================== */
@@ -702,6 +726,10 @@ body {
   .checkout__section {
     padding: 40px 30px;
   }
+  footer {
+    padding: 35px 4%;
+  }
+  
 }
 
 /* --- =============768PX RESPONSIVE========= --- */
@@ -777,6 +805,15 @@ body {
   .form__row {
     flex-direction: column;
     gap: 16px;
+  }
+  footer {
+    padding: 30px 4%;
+  }
+  .footer__content a {
+    font-size: 18px;
+  }
+  .footer__content p {
+    font-size: 11px;
   }
 }
 
@@ -941,6 +978,15 @@ body {
     padding: 12px 14px;
     font-size: 12px;
   }
+  footer {
+    padding: 24px 16px;
+  }
+  .footer__content a {
+    font-size: 16px;
+  }
+  .footer__content p {
+    font-size: 11px;
+  }
 }
 
 /* --- ==================320PX RESPONSIVE================ --- */
@@ -1039,5 +1085,15 @@ body {
   .error__msg {
     font-size: 10px;
     margin-top: 4px;
+  }
+  footer {
+    padding: 20px 10px;
+  }
+  .footer__content a {
+    font-size: 15px;
+  }
+  .footer__content p {
+    font-size: 10px;
+    margin-top: 6px;
   }
 }
