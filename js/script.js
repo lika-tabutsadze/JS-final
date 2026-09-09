@@ -1,10 +1,12 @@
+// =====TRANSLATION========
+
 import { translations } from "./translations.js";
 
 let currentLang = localStorage.getItem("museLang") || "en";
 
 function setLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem("auraLang", lang);
+  localStorage.setItem("museLang", lang);
 
   const langToggle = document.getElementById("lang__toggle");
   if (langToggle) langToggle.textContent = lang === "en" ? "KA" : "EN";
@@ -26,6 +28,8 @@ if (langToggle) {
 
 setLanguage(currentLang);
 
+// ====HEADER BACKGROUND CHANGE ON SCROLL=========
+
 const header = document.getElementById("main__header");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
@@ -36,7 +40,6 @@ window.addEventListener("scroll", () => {
 });
 
 // ====BURGER MENU============//
-
 
 const burgerMenu = document.getElementById("burger__menu");
 const navLinks = document.getElementById("nav__links");
@@ -54,3 +57,39 @@ if (burgerMenu && navLinks) {
     });
   });
 }
+
+// ========SALE TIMER=======//
+
+function saleTimer(durationHours) {
+  let endTime = localStorage.getItem("museSaleEndTime");
+
+  if (!endTime) {
+    endTime = new Date().getTime() + durationHours * 3600 * 1000;
+    localStorage.setItem("museSaleEndTime", endTime);
+  }
+
+  function updateTimer() {
+    const now = new Date().getTime();
+    const remaining = Math.max(0, Math.floor((endTime - now) / 1000));
+
+    const hours = Math.floor(remaining / 3600);
+    const minutes = Math.floor((remaining % 3600) / 60);
+    const seconds = remaining % 60;
+
+    if (document.getElementById("hours"))
+      document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+    if (document.getElementById("minutes"))
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+    if (document.getElementById("seconds"))
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+
+    if (remaining <= 0) {
+      localStorage.removeItem("museSaleEndTime");
+    }
+  }
+
+  updateTimer();
+  setInterval(updateTimer, 1000);
+}
+saleTimer(2);
+

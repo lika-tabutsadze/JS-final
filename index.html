@@ -89,20 +89,110 @@
     </header>
 
     <main>
-        <!-- HERO SECTION -->
-    <section class="hero__section">
-      <div class="hero__content">
-        <span class="hero__subtitle" data-i18n="heroSubtitle"
-          >Essence of Pure Radiance</span
-        >
-        <h1 data-i18n="heroTitle">Unveil Your Natural Glow</h1>
-        <p data-i18n="heroText">
-          Clean, dermatologically tested formulas engineered to elevate your
-          daily routine with weightless finish and vivid pigment.
-        </p>
-        <a href="#shop" class="btn" data-i18n="heroBtn">Explore Collection</a>
-      </div>
-    </section>
+      <!-- HERO SECTION -->
+      <section class="hero__section">
+        <div class="hero__content">
+          <span class="hero__subtitle" data-i18n="heroSubtitle"
+            >Essence of Pure Radiance</span
+          >
+          <h1 data-i18n="heroTitle">Unveil Your Natural Glow</h1>
+          <p data-i18n="heroText">
+            Clean, dermatologically tested formulas engineered to elevate your
+            daily routine with weightless finish and vivid pigment.
+          </p>
+          <a href="#shop" class="btn" data-i18n="heroBtn">Explore Collection</a>
+        </div>
+      </section>
+
+      <section id="sale" class="section__wrapper">
+        <div class="container">
+          <div class="sale__section">
+            <div class="section__title">
+              <h2 data-i18n="saleTitle">Limited Time Offer</h2>
+              <p data-i18n="saleDesc">
+                Exclusive deals on curated beauty essentials
+              </p>
+            </div>
+
+            <div class="countdown__container">
+              <div class="time__box">
+                <span id="hours">02</span>
+                <small data-i18n="timeHours">Hours</small>
+              </div>
+              <div class="time__box">
+                <span id="minutes">00</span>
+                <small data-i18n="timeMins">Mins</small>
+              </div>
+              <div class="time__box">
+                <span id="seconds">00</span>
+                <small data-i18n="timeSecs">Secs</small>
+              </div>
+            </div>
+
+            <div class="sale__grid">
+              <div class="sale__card">
+                <span class="discount__badge">-25%</span>
+                <img
+                  src="./images/FlashSale/flashsale1.jpg"
+                  alt="Velvet Nude Lip Color"
+                />
+                <h3>Velvet Nude Matte</h3>
+                <div class="price">
+                  <span class="old__price">$32.00</span> $24.00
+                </div>
+                <button
+                  class="btn btn__sm btn__full add__to__cart"
+                  data-name="Velvet Nude Matte"
+                  data-price="24.00"
+                  data-i18n="addToCart"
+                >
+                  Add to Cart
+                </button>
+              </div>
+
+              <div class="sale__card">
+                <span class="discount__badge">-30%</span>
+                <img
+                  src="./images/FlashSale/flashsale2.avif"
+                  alt="Radiance Serum Foundation"
+                />
+                <h3>Luminous Serum Base</h3>
+                <div class="price">
+                  <span class="old__price">$48.00</span> $33.60
+                </div>
+                <button
+                  class="btn btn__sm btn__full add__to__cart"
+                  data-name="Luminous Serum Base"
+                  data-price="33.60"
+                  data-i18n="addToCart"
+                >
+                  Add to Cart
+                </button>
+              </div>
+
+              <div class="sale__card">
+                <span class="discount__badge">-20%</span>
+                <img
+                  src="./images/FlashSale/flashsale3.jpg"
+                  alt="Rose Quartz Highlighter"
+                />
+                <h3>Glow Rose Highlighter</h3>
+                <div class="price">
+                  <span class="old__price">$28.00</span> $22.40
+                </div>
+                <button
+                  class="btn btn__sm btn__full add__to__cart"
+                  data-name="Glow Rose Highlighter"
+                  data-price="22.40"
+                  data-i18n="addToCart"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script type="module" src="./js/script.js"></script>
